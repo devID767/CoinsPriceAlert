@@ -31,6 +31,9 @@ async def start(message):
 
 @dp.message_handler(commands=['stop'])
 async def stop(message):
+    if CoinSending.get(message.chat.id) == None:
+        await bot.send_message(message.chat.id, f'Вы не подписаны на рассылку', )
+        return
     send = CoinSending[message.chat.id]
     await send.Stop()
     CoinSending[message.chat.id] = None
