@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, executor, types
 import Coins
 import Keyboards as kb
 
-bot = Bot('2007889284:AAHEyF5naTazhwdkTW-PiX7LAevQ8rBiLks')
+bot = Bot('**')
 dp = Dispatcher(bot)
 
 CoinSending = {}
